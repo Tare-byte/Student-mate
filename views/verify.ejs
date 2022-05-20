@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify</title>
+</head>
+<body>
+    <!-- <div class="flex items-center justify-center min-h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
+		<div class="w-full max-w-md space-y-8">
+			<div>
+				<img class="w-auto h-12 mx-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+				<h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+					
+				</h2>
+				<p class="mt-2 text-sm text-center text-gray-600">
+					Or
+					<a href="store.html" class="font-medium text-indigo-600 hover:text-indigo-500">
+						
+					</a>
+				</p>
+			</div>
+
+			<div class="max-w-md p-5 overflow-hidden bg-white rounded shadow-xl"> -->
+
+				<form class="space-y-4" action="/addItem" method="POST" enctype="multipart/form-data">
+                    <p><%= msg %></p>
+					<input type="hidden" name="remember" value="True">
+					<div class="-space-y-px rounded-md shadow-sm">
+						<div class="grid gap-6">
+							<div class="col-span-12">
+								<label for="first_name" class="block text-sm font-medium text-gray-700">Name</label>
+								<input type="text" name="full_name" id="full_name" autocomplete="given-name" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+                            <br>
+
+							<div class="col-span-12">
+								<label for="Amount" class="block text-sm font-medium text-gray-700">Amount</label>
+								<input type="number" name="Amount" id="amount" autocomplete="schools" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+                            <br>
+                            <div class="col-span-12">
+                                <label for="national_id" class="block text-sm font-medium text-gray-700">Upload Image:</label>
+                                <br>
+                                <input type="file" name="filename" id="myfile" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                </div>
+                                <input type="submit" value="add Item">
+                            </form>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <div class="store">
+        <% if (item==true) { %>
+            <% for( let i = data.length-1; i >=0; i-- ) { %>
+                <div class="product" onclick="move('/item/buy/data/<%= data[i]._id %>')">
+                    <img src="<%= weblink %><%= data[i].image %>" alt="fan">
+                    <p><%= data[i].name %></p>
+                    <h6><%= data[i].amount %></h6>
+                    <ul>
+                      <li><i class="fa fa-star checked"></i></li>
+                      <li><i class="fa fa-star checked"></i></li>
+                      <li><i class="fa fa-star checked"></i></li>
+                      <li><i class="fa fa-star checked"></i></li>
+                      <li><i class="fa fa-star "></i></li>
+                    </ul>
+                    <button class="buy-1">Buy Now</button>
+                  </div>   
+            
+            <% } %>
+        <% } else if(item==false) { %>
+            <center><h2>No Item</h2></center>
+        <%} %> 
+      <!-- <div class="product">
+        <img src="/assets/images/book stack.jpg" alt="fan">
+        <p>Books</p>
+        <h6>NGN5,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>        
+        <button class="buy-2">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/assets/images/desk.jpg" alt="fan">
+        <p>Study table</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>        
+        <button class="buy-3">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/assets/images/laptop.jpg" alt="fan">
+        <p>laptop</p>
+        <h6>NGN150,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>        
+        <button class="buy-4">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/assets/images/phone.jpg" alt="fan">
+        <p>Smartphone</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>        
+         <button class="buy-5">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div>
+      <div class="product">
+        <img src="/assets/images/fan.jpg" alt="fan">
+        <p>An Electric fan</p>
+        <h6>NGN15,000.00</h6>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star "></i></li>
+        </ul>      
+        <button class="buy-6">Buy Now</button>  
+      </div> -->
+    </div>
+  
+    <script>
+        function move(move){
+            window.location.pathname=move
+        }
+    </script>
+    <!-- <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stud_page</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+   
+  <div class="flex items-center justify-center min-h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
+		<div class="w-full max-w-md space-y-8">
+			<div>
+				<img class="w-auto h-12 mx-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+				<h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+					Provide personal details
+				</h2>
+				<p class="mt-2 text-sm text-center text-gray-600">
+					Or
+					<a href="store.html" class="font-medium text-indigo-600 hover:text-indigo-500">
+						Go back to catalog
+					</a>
+				</p>
+			</div>
+
+			<div class="max-w-md p-5 overflow-hidden bg-white rounded shadow-xl">
+
+				<form class="space-y-4" action="." method="POST">
+					<input type="hidden" name="remember" value="True">
+					<div class="-space-y-px rounded-md shadow-sm">
+						<div class="grid gap-6">
+							<div class="col-span-12">
+								<label for="first_name" class="block text-sm font-medium text-gray-700">Full name</label>
+								<input type="text" name="full_name" id="full_name" autocomplete="given-name" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+
+							<div class="col-span-12">
+								<label for="email_address" class="block text-sm font-medium text-gray-700">School Name</label>
+								<input type="text" name="school_name" id="school_name" autocomplete="schools" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+
+              <div class="col-span-12">
+								<label for="email_address" class="block text-sm font-medium text-gray-700">Student Email address</label>
+								<input type="text" name="email_address" id="email_address" autocomplete="email" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+
+              <div class="col-span-12">
+								<label for="home_address" class="block text-sm font-medium text-gray-700">Home Adress or Preferred delivery location</label>
+								<input type="text" name="home_address" id="home_address" autocomplete="address-line3" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+              
+              <div class="col-span-12">
+								<label for="account_name" class="text-sm font-medium text-gray-700 blocka">Account name:</label>
+								<input type="text" name="bvn" id="bvn" autocomplete="cc-number" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+							
+				<div class="col-span-12">
+							<label for="account_receipt" class="block text-sm font-medium text-gray-700">Account Receipt:</label>
+							<br>
+							<input type="file" name="file_name" id="myfile" autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+							<br>
+							<div class="col-span-12">
+								<label for="school_id" class="block text-sm font-medium text-gray-700">Upload Valid School Id:</label>
+								<br>
+								<input type="file" name="file_name" id="myfile" autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								</div>
+				  <br>
+								<div class="col-span-12">
+									<label for="national_id" class="block text-sm font-medium text-gray-700">Upload Valid National Id:</label>
+									<br>
+									<input type="file" name="file_name" id="myfile" autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+									</div>
+					  <br>
+              
+              <div class="col-span-12">
+								<label for="email_address" class="block text-sm font-medium text-gray-700">Product Id</label>
+								<input type="text" name="product_id" id="product_id" autocomplete="cc-number" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							</div>
+						 
+              
+				
+
+          
+					<!-- <div class="flex items-center justify-between">
+						<div class="flex items-center">
+							<input id="remember_me" name="remember_me" type="checkbox" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+							<label for="remember_me" class="block ml-2 text-sm text-gray-900">
+								Remember me
+							</label>
+						</div>
+
+						<div class="text-sm">
+							<a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+								Forgot your password?
+							</a>
+						</div>
+					</div> -->
+
+
+					<div>
+						<br>
+						
+						<button type="submit" class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+							<span class="absolute inset-y-0 left-0 flex items-center pl-3">
+								<!-- Heroicon name: solid/lock-closed -->
+								<svg class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="True">
+									<path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+								</svg>
+							</span>
+							Place Order
+						</button>
+					</div>
+				</form>
+		</div>
+
+</body>
+</html>
