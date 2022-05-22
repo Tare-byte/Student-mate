@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin list</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<!-- kk -->
+    <% if (items== true) { %>
+        <Table>
+            <tr>
+                <th>Fullname</th>
+                <th>School</th>
+                <th>Home Address</th>
+                <th>Acctn Name</th>
+                <th>Email</th>
+                <!-- <th>Verification</th> -->
+                <th>Product ID</th>
+                <th>Reciept</th>
+                <th>Verify</th>
+                <th>reject</th>
+            </tr>
+            <% for( let i = itemuser.length-1; i >=0; i-- ) { %>
+            
+                <tr>
+                    <td><%= itemuser[i].fullname %></td>
+                    <td><%= itemuser[i].schoolname %></td>
+                    <td><%= itemuser[i].Homeadress %></td>
+                    <td><%= itemuser[i].Accountname %></td>
+                    <td><%= itemuser[i].studentemailaddress %></td>
+                    <!-- <td><%= itemuser[i].verified %></td> -->
+                    <td><%= itemuser[i].Productid %></td>
+                    <td><a href="<%= itemuser[i].Accountreciept %>" download>Download</a></td>
+                    <% if (itemuser[i].verified==true) { %>
+                        <td style="color: green;">Verified</td>
+                        <td><a href="/reject/<%= itemuser[i]._id %>">Reject</a></td>
+                    <% }else{ %>
+                    <td><a href="/verify/<%= itemuser[i]._id %>">Verify</a></td>
+                    <td><a href="/reject/<%= itemuser[i]._id %>">Reject</a></td>
+                    <% } %> 
+                    
+
+                </tr>
+                <!-- <h2> UserName:<%= itemuser[i].fullname %>, Accountname:<%= itemuser[i].Accountname %> </h2> -->
+            <% } %>
+        </Table>
+        
+    <% }else{ %>
+        <h1>no item request</h1>
+    <% } %>
+    
+</body>
+</html>

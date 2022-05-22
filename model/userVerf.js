@@ -13,6 +13,7 @@ const UserItem = new Schema({
     Accountreciept:String,
     Productid:String,
     studentemailaddress:String,
+    verified:Boolean
     
 });
 const User_Item= mongoose.model("UserItem", UserItem);

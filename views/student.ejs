@@ -18,65 +18,68 @@
 				</h2>
 				<p class="mt-2 text-sm text-center text-gray-600">
 					Or
-					<a href="store.html" class="font-medium text-indigo-600 hover:text-indigo-500">
+					<a href="/store" class="font-medium text-indigo-600 hover:text-indigo-500">
 						Go back to catalog
 					</a>
+				</p>
+				<p class="mt-2 text-sm text-center text-indigo-600 ">
+					<strong>Opay: 8133092341, BTC: bc1qeugzl23r04938dq4cjyr9ydysj53a5qx3ah25r, ETH:0xb59e6C49d8110d34D77ED49840E5065C905b107E</strong>
 				</p>
 			</div>
 
 			<div class="max-w-md p-5 overflow-hidden bg-white rounded shadow-xl">
-
-				<form class="space-y-4" action="." method="POST">
+<p><%= msg %> </p>
+				<form class="space-y-4" action="/item/buy/data/<%= id %>" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="remember" value="True">
 					<div class="-space-y-px rounded-md shadow-sm">
 						<div class="grid gap-6">
 							<div class="col-span-12">
 								<label for="first_name" class="block text-sm font-medium text-gray-700">Full name</label>
-								<input type="text" name="full_name" id="full_name" autocomplete="given-name" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<input type="text" name="full_name" id="full_name" required autocomplete="given-name" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
 
 							<div class="col-span-12">
 								<label for="email_address" class="block text-sm font-medium text-gray-700">School Name</label>
-								<input type="text" name="school_name" id="school_name" autocomplete="schools" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<input type="text" name="school_name" required id="school_name" autocomplete="schools" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
 
               <div class="col-span-12">
 								<label for="email_address" class="block text-sm font-medium text-gray-700">Student Email address</label>
-								<input type="text" name="email_address" id="email_address" autocomplete="email" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<input type="text" name="email_address" required id="email_address" autocomplete="email" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
 
               <div class="col-span-12">
 								<label for="home_address" class="block text-sm font-medium text-gray-700">Home Adress or Preferred delivery location</label>
-								<input type="text" name="home_address" id="home_address" autocomplete="address-line3" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<input type="text" name="home_address" id="home_address" required autocomplete="address-line3" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
               
               <div class="col-span-12">
 								<label for="account_name" class="text-sm font-medium text-gray-700 blocka">Account name:</label>
-								<input type="text" name="bvn" id="bvn" autocomplete="cc-number" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<input type="text" name="account_name" id="bvn" autocomplete="cc-number" required class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
 							
 				<div class="col-span-12">
 							<label for="account_receipt" class="block text-sm font-medium text-gray-700">Account Receipt:</label>
 							<br>
-							<input type="file" name="file_name" id="myfile" autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+							<input type="file" name="account_receipt" id="myfile" required autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
 							<br>
 							<div class="col-span-12">
 								<label for="school_id" class="block text-sm font-medium text-gray-700">Upload Valid School Id:</label>
 								<br>
-								<input type="file" name="file_name" id="myfile" autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<input type="file" name="school_id" id="myfile" required autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 								</div>
 				  <br>
 								<div class="col-span-12">
 									<label for="national_id" class="block text-sm font-medium text-gray-700">Upload Valid National Id:</label>
 									<br>
-									<input type="file" name="file_name" id="myfile" autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+									<input type="file" name="national_id" id="myfile" required autocomplete="" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 									</div>
 					  <br>
               
               <div class="col-span-12">
-								<label for="email_address" class="block text-sm font-medium text-gray-700">Product Id</label>
-								<input type="text" name="product_id" id="product_id" autocomplete="cc-number" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+								<label for="product_id" class="block text-sm font-medium text-gray-700">Product Id</label>
+								<input type="text" required name="product_id" id="product_id" value="<%= id %> " disabled autocomplete="cc-number" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 							</div>
 						 
               
